@@ -3,6 +3,6 @@ const deck = new Deck();
 
 export default function handler(req, res) {
   const { quantity } = req.query;
-  const card = deck.dispatchCards(parseInt(quantity));
-  res.status(200).send(card);
+  const cards = deck.dispatchCards(+quantity);
+  res.status(200).send(cards);
 }
